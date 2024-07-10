@@ -1,0 +1,60 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *::after, *::before {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    color: red;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/background_image.jpg');
+    background-position: center;
+    background-size: cover;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+#main-title {
+    font-family: "Abril Fatface", serif;
+    font-size: 90px;
+    font-weight: 500;
+    color:aliceblue;
+}
+
+#main-nav-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 75px;
+}
+
+#main-navigation {
+  text-align: right;
+}
+
+.main-nav-ref {
+    text-decoration: none;
+    color: aliceblue;
+    font-family: "Nunito", sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
