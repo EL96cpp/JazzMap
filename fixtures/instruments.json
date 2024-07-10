@@ -1,0 +1,10 @@
+[
+    {"model": "musicians.instrument", "pk": 0, "fields": {"name": "Saxophone"}},
+    {"model": "musicians.instrument", "pk": 1, "fields": {"name": "Trumpet"}},
+    {"model": "musicians.instrument", "pk": 2, "fields": {"name": "Piano"}},
+    {"model": "musicians.instrument", "pk": 3, "fields": {"name": "Guitar"}},
+    {"model": "musicians.instrument", "pk": 4, "fields": {"name": "Vibraphone"}},
+    {"model": "musicians.instrument", "pk": 5, "fields": {"name": "Drums"}},
+    {"model": "musicians.instrument", "pk": 6, "fields": {"name": "Bass"}},
+    {"model": "musicians.instrument", "pk": 7, "fields": {"name": "Vocal"}}
+]
