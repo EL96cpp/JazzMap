@@ -1,7 +1,7 @@
 from django.apps import AppConfig
 
 
-class GenresConfig(AppConfig):
+class ClubsConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'genres'
-    verbose_name = 'Жанры'
+    name = 'clubs'
+    verbose_name = 'Клубы'
