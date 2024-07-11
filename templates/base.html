@@ -23,11 +23,10 @@
 <body>
     <div class="navbar">
         <p id="main-title">JazzMap</p>
-        <nav id="main-navigation">
-            <a class="main-nav-ref" id="musicians-ref" href="#">Исполнители</a>
-            <a class="main-nav-ref" id="styles-ref" href="#">Стили</a>
-            <a class="main-nav-ref" id="clubs-ref" href="#">Клубы</a>
-        </nav>
+        {% block header %}{% endblock header%}
+    </div>
+    <div class="body-container">
+        {% block body %}{% endblock body %}
     </div>
 </body>
 </html>
