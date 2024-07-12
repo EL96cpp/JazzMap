@@ -1,0 +1,90 @@
+[
+    {"model": "home.quote", "pk": 0, "fields": 
+    {"text": "I find my inspiration in myself.", "author": "Thelonious Monk"}},
+    {"model": "home.quote", "pk": 1, "fields": 
+    {"text": "The piano ain't got no wrong notes.", "author": "Thelonious Monk"}},
+    {"model": "home.quote", "pk": 2, "fields": 
+    {"text": "After two takes you're imitating yourself.", "author": "Thelonious Monk"}},
+    {"model": "home.quote", "pk": 3, "fields": 
+    {"text": "Talking about music is like dancing about architecture.", "author": "Thelonious Monk"}},
+    {"model": "home.quote", "pk": 4, "fields": 
+    {"text": "I don't have a definition of Jazz. You're just supposed to know it when you hear it.", "author": "Thelonious Monk"}},
+    {"model": "home.quote", "pk": 4, "fields": 
+    {"text": "I like to sleep. There is no set time of day for sleep. You sleep when you're tired & that's all there is to it.", "author": "Thelonious Monk"}},
+    
+    {"model": "home.quote", "pk": 5, "fields": 
+    {"author": "Wes Montgomery", "text": "When I got pretty good I went on the road with a group. We starved."}},
+    {"model": "home.quote", "pk": 6, "fields": 
+    {"author": "Wes Montgomery", "text": "Regardless of what you play, the biggest thing is keeping the feel going."}},
+    {"model": "home.quote", "pk": 7, "fields": 
+    {"author": "Wes Montgomery", "text": "To me, the guitar cuts through. It carries more than the organ, but the organ has got more guts."}},
+    {"model": "home.quote", "pk": 8, "fields": 
+    {"author": "Wes Montgomery", "text": "I never practice my guitar. From time to time I just open the case & throw in a piece of raw meat."}},
+
+    {"model": "home.quote", "pk": 9, "fields": 
+    {"author": "Pat Metheny", "text": "Listening is the key to everything good in music."}},
+    {"model": "home.quote", "pk": 10, "fields": 
+    {"author": "Pat Metheny", "text": "Jazz music will continue to thrive, possibly in unexpected ways."}},
+    {"model": "home.quote", "pk": 11, "fields": 
+    {"author": "Pat Metheny", "text": "Jazz is an idea that is more powerful than the details of its history."}},
+    {"model": "home.quote", "pk": 12, "fields": 
+    {"author": "Pat Metheny", "text": "My first relationship to any kind of musical situation is as a listener."}},
+    {"model": "home.quote", "pk": 13, "fields": 
+    {"author": "Pat Metheny", "text": "The beauty of Jazz is that it's malleable. People address it to suit their own personalities."}},
+    {"model": "home.quote", "pk": 14, "fields": 
+    {"author": "Pat Metheny", "text": "It is Jazz's very nature to change, to develop & adapt to the circumstances of its environment."}},
+    {"model": "home.quote", "pk": 15, "fields": 
+    {"author": "Pat Metheny", "text": "I don't worry too much about the fundamentalist principles that are in almost any discussion about Jazz."}},
+    {"model": "home.quote", "pk": 16, "fields": 
+    {"author": "Pat Metheny", "text": "Jazz demands that you bring to it things that are valuable to you, that are personal to you."}},
+    {"model": "home.quote", "pk": 17, "fields": 
+    {"author": "Pat Metheny", "text": "Jazz is not something that can be defined through blunt instruments. It is much more poetic than that."}},
+    {"model": "home.quote", "pk": 18, "fields": 
+    {"author": "Pat Metheny", "text": "People sometimes say it takes a long time to become a Jazz fan, but for me it took about five seconds."}},
+
+
+    {"model": "home.quote", "pk": 18, "fields": 
+    {"author": "Charlie Parker", "text": "I can play all I know in eight bars."}},
+    {"model": "home.quote", "pk": 19, "fields": 
+    {"author": "Charlie Parker", "text": "You've got to learn your instrument."}},
+    {"model": "home.quote", "pk": 20, "fields": 
+    {"author": "Charlie Parker", "text": "Don't play the saxophone. Let it play you."}},
+    {"model": "home.quote", "pk": 21, "fields": 
+    {"author": "Charlie Parker", "text": "If you don't live it, it won't come out of your horn."}},
+    {"model": "home.quote", "pk": 22, "fields": 
+    {"author": "Charlie Parker", "text": "It's not all smoke and mirrors. Some of it comes from books."}},
+    {"model": "home.quote", "pk": 23, "fields": 
+    {"author": "Charlie Parker", "text": "Once I could play what I heard inside me, that's when I was born."}},
+    {"model": "home.quote", "pk": 24, "fields": 
+    {"author": "Charlie Parker", "text": "Master your instrument, master the music & then forget all that & just play."}},
+    {"model": "home.quote", "pk": 25, "fields": 
+    {"author": "Charlie Parker", "text": "I kept thinking there's bound to be something else? I could hear it sometimes, but I couldn't play it."}},
+    {"model": "home.quote", "pk": 26, "fields": 
+    {"author": "Charlie Parker", "text": "They teach you there's a boundary line to music. But, man, there's no boundary line to art."}},
+    {"model": "home.quote", "pk": 27, "fields": 
+    {"author": "Charlie Parker", "text": "Music is your experience, your thoughts, your wisdom. If you don't live it, it won't come out of your horn."}},
+
+    {"model": "home.quote", "pk": 28, "fields": 
+    {"author": "Louis Armstrong", "text": "What we play is life."}},
+    {"model": "home.quote", "pk": 29, "fields": 
+    {"author": "Louis Armstrong", "text": "You blows who you is."}},
+    {"model": "home.quote", "pk": 30, "fields": 
+    {"author": "Louis Armstrong", "text": "Man, if you gotta ask you'll never know"}},
+    {"model": "home.quote", "pk": 31, "fields": 
+    {"author": "Louis Armstrong", "text": "I don't need words. It's all in the phrasing."}},
+    {"model": "home.quote", "pk": 32, "fields": 
+    {"author": "Louis Armstrong", "text": "Never play anything the same way twice."}},
+    {"model": "home.quote", "pk": 33, "fields": 
+    {"author": "Louis Armstrong", "text": "We all do 'do, re, mi' but you got to find the other notes yourself."}},
+    {"model": "home.quote", "pk": 34, "fields": 
+    {"author": "Louis Armstrong", "text": "Musicians don't retire; they stop when there's no more music in them."}},
+    {"model": "home.quote", "pk": 35, "fields": 
+    {"author": "Louis Armstrong", "text": "There is two kinds of music, the good & the bad. I play the good kind."}},
+    {"model": "home.quote", "pk": 36, "fields": 
+    {"author": "Louis Armstrong", "text": "Man, all music is folk music. You ain't never heard no horse sing a song, have you?"}},
+    {"model": "home.quote", "pk": 37, "fields": 
+    {"author": "Louis Armstrong", "text": "Hot can be cool & cool can be hot & each can be both. But hot or cool man, Jazz is Jazz."}},
+    {"model": "home.quote", "pk": 38, "fields": 
+    {"author": "Louis Armstrong", "text": "If I don't practice for a day, I know it... for two days, the critics know it... three days, the public knows it."}}
+
+]

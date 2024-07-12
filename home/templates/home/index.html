@@ -13,25 +13,25 @@
 
 {% block body %}
 
-<div id="quote-previous-wrapper">
-    <svg viewBox="0 0 17 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-        <path d="M5.207 8.471l7.146 7.147-0.707 0.707-7.853-7.854 7.854-7.853 0.707 0.707-7.147 7.146z" fill="#ffffff" />
-    </svg>
-</div>
+<div class="quote-container">
 
-<div class="quote-wrapper">
-    <p class="quote-text">
-        «Джазовая музыка сильна настоящим моментом. Нет никакого сценария.
-        Это диалог. Решение о том, какими эмоциями поделиться со слушателями, 
-        музыканты принимают за доли секунды на основании того, что чувствуют прямо сейчас». 
-        <br/><span class="quote-author">-Уинтон Марсалис</span>
-    </p>
-</div>
+    <div class="quote-wrapper">
+        {% include "home/includes/quote.html" %}
+    </div>
 
-<div id="quote-next-wrapper">
-    <svg viewBox="0 0 17 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-        <path d="M13.207 8.472l-7.854 7.854-0.707-0.707 7.146-7.146-7.146-7.148 0.707-0.707 7.854 7.854z" fill="#ffffff" />
-    </svg>
+    <div class="quote-navigation-wrapper">
+        <a class="quote-previous-wrapper" data-quote-id="{{ current_quote.id }}">
+            <svg viewBox="0 0 17 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <path d="M5.207 8.471l7.146 7.147-0.707 0.707-7.853-7.854 7.854-7.853 0.707 0.707-7.147 7.146z" fill="#ffffff" />
+            </svg>
+        </a>
+        <a class="quote-next-wrapper" data-quote-id="{{ current_quote.id }}">
+            <svg viewBox="0 0 17 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <path d="M13.207 8.472l-7.854 7.854-0.707-0.707 7.146-7.146-7.146-7.148 0.707-0.707 7.854 7.854z" fill="#ffffff" />
+            </svg>
+        </a>
+    </div>
+
 </div>
 
 {% endblock body %}

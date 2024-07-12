@@ -22,21 +22,31 @@ html {
     justify-content:space-evenly;
 }   
 
-#quote-next-wrapper {
+.quote-container {
+    width: 1400px;
+    display:block;
+}
+
+.quote-next-wrapper, .quote-previous-wrapper {
     width: 80px;
     height: 80px;
-    margin-right: 300px;
 } 
 
-#quote-previous-wrapper {
-    width: 80px;
-    height: 80px;
-    margin-left: 300px;
-} 
+.quote-navigation-wrapper {
+    width: 250px;
+    height: 90px;
+    margin: -90px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.quote-next-wrapper:hover svg path, .quote-previous-wrapper:hover svg path {
+    fill:rgb(24, 246, 246);
+}
 
 .quote-wrapper {
     margin: 0 auto;
-    width: 100%;
+    width: 1000px;
     height: 100%;
     text-align: center;
 }
@@ -73,7 +83,6 @@ html {
 
 #quote-next-navigation {
     color:aliceblue;
-    background-color: red;
 }
 
 .navbar {
