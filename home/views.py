@@ -20,9 +20,7 @@ def index(request):
 
 def get_next_quote(request):
     cache_list = cache.get("quotes_list")
-
     quote_id = request.GET.get("quote_id")
-    print("Quote id ", quote_id)
     index = -1
 
     for i, quote in enumerate(cache_list):
@@ -37,8 +35,6 @@ def get_next_quote(request):
     else:
         current_quote = cache_list[index+1]
 
-    print(current_quote.id, index, current_quote.text)
-
     quote_html = render_to_string("home/includes/quote.html", context={"current_quote": current_quote})
     return JsonResponse({"quote_html": quote_html, "quote_id": current_quote.id})
 
@@ -46,9 +42,7 @@ def get_next_quote(request):
 
 def get_previous_quote(request):
     cache_list = cache.get("quotes_list")
-
     quote_id = request.GET.get("quote_id")
-    print("Quote id ", quote_id)
     index = -1
 
     for i, quote in enumerate(cache_list):
@@ -59,8 +53,6 @@ def get_previous_quote(request):
             break
 
     current_quote = cache_list[index-1]
-
-    print(current_quote.id, index, current_quote.text)
 
     quote_html = render_to_string("home/includes/quote.html", context={"current_quote": current_quote})
     return JsonResponse({"quote_html": quote_html, "quote_id": current_quote.id})

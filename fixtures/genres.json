@@ -7,12 +7,6 @@
     {"name": "Gipsy jazz"}},
     {"model": "genres.genre", "pk": 3, "fields": 
     {"name": "Bebop"}},
-    {"model": "genres.genre", "pk": 4, "fields": 
-    {"name": "Cool jazz"}},
-    {"model": "genres.genre", "pk": 5, "fields": 
-    {"name": "Hard bop"}},
-    {"model": "genres.genre", "pk": 6, "fields": 
-    {"name": "Modal jazz"}},
     {"model": "genres.genre", "pk": 7, "fields": 
     {"name": "Latin jazz"}},
     {"model": "genres.genre", "pk": 8, "fields": 
