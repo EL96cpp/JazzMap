@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block header %}
+
+<a class="main-nav-ref" id="styles-ref" href="{% url 'genres:genres_list' %}">Назад</a>
+
+{% endblock header %}
+
+{% block body %}
+
+<div class="genre-article-container">
+    <p class="genre-article-title">{{ genre.name }}</p>
+    <text class="genre-article-text">
+        <img src="{{ genre.image.url }}" alt="{{ genre.name }}" class="genre-article-image">    
+        {{ genre.text }}
+    </text>
+</div>
+
+{% endblock body %}

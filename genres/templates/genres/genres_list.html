@@ -12,12 +12,12 @@
 <div class="genres-grid">
 
     {% for genre in genres %}
-
+    <a href="{% url 'genres:show_genre' genre.slug %}" class="genre_ref">
         <div class="genre-wrapper">
             <img src="{{ genre.image.url }}" alt="{{ genre.name }}" class="genre-image">
             <h2 class="genre-name">{{ genre.name }}</h2>
         </div>
-
+    </a>
     {% endfor %}
 
 </div>
