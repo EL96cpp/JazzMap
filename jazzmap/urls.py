@@ -22,11 +22,12 @@ from django.contrib import admin
 from django.urls import path, include
 
 
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('home.urls')),
     path('genres/', include('genres.urls', namespace='genres')),
+    path('clubs/', include('clubs.urls', namespace='clubs')),
+    path('musicians/', include('musicians.urls', namespace='musicians'))
 ]
 
 
