@@ -166,9 +166,15 @@ ul {
     width: 200px;
     position: relative;
     align-items: center;
+    transition: transform 0.5s;
+}
+
+.genre-wrapper:hover {
+    transform: translateY(-10px);
 }
 
 .genre-image {
+    transition: transform 0.5s;
     width: 200px;
     height: 200px;
     border-radius: 20px;
