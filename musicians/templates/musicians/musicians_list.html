@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load musicians_extras %}
 
 {% block header %}
 
@@ -9,31 +10,53 @@
 
 {% block body %}
 
-<div class="musicians-list-container">
-    
-    {{ musicians_dict.count }}
+<div class="musician-list-container">
 
-    {% for key, value in musicians_dict.items %}
+    <div class="musicians-list-wrapper">
+        
+        {{ musicians_dict.count }}
 
-        <div class="musician-letter-wrapper">
+        {% for key, value in musicians_dict.items %}
 
-            <h2 class="musicain-letter-title">{{ key }}</h2>
+            <div class="musician-letter-wrapper">
 
-            <ul class="musicians-letter-list">
+                <h2 class="musicain-letter-title">{{ key }}</h2>
 
-                {% for musician in value %}
-                <li class="musician-li">
-                    <a class="musician-name-ref" href="{% url 'musicians:show_musician' musician.slug %}">{{ musician.first_name }} {{ musician.last_name }}</a>
-                </li>
-                {% endfor %}
+                <ul class="musicians-letter-list">
 
-            </ul>
+                    {% for musician in value %}
+                    <li class="musician-li">
+                        <a class="musician-name-ref" href="{% url 'musicians:show_musician' musician.slug %}">{{ musician.first_name }} {{ musician.last_name }}</a>
+                    </li>
+                    {% endfor %}
 
-        </div>
+                </ul>
 
-    {% endfor %}
+            </div>
+
+        {% endfor %}
+
+    </div>
+
+    <div class="pagination">
+        <span class="step-links">
+            {% if page_obj.has_previous %}
+                <a class="first_page" href="{% my_url 1 'page' request.GET.urlencode %}">&laquo; Первая</a>
+                <a class="previous_page" href="{% my_url page_obj.paginator.previous_page_number 'page' request.GET.urlencode %}">
+                {{ page_obj.previous_page_number }}</a>
+            {% endif %}
+
+            <span class="current">
+                {{ page_obj.number }}
+            </span>
+
+            {% if page_obj.has_next %}
+                <a class="next_page" href="{% my_url page_obj.next_page_number 'page' request.GET.urlencode %}">{{ page_obj.next_page_number }}</a>
+                <a class="last_page" href="{% my_url page_obj.paginator.num_pages 'page' request.GET.urlencode %}">Последняя &raquo;</a>
+            {% endif %}
+        </span>
+    </div>
 
 </div>
-
 
 {% endblock body %}
