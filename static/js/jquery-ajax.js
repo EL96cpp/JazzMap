@@ -88,4 +88,19 @@ $(document).ready(function () {
 
     });
 
+    $("#instrument-filter-select").on('change', function() {
+
+        console.log(this.value);
+
+
+    });
+
+    $("#genre-filter-select").on('change', function() {
+
+        console.log(this.value);
+
+
+    });
+
+
 });

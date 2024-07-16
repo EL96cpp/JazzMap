@@ -9,7 +9,7 @@
         <h2 class="musicians-filters-title">Инструмент:</h2>
 
         <div class="box">
-            <select class="filters-select" id="instrument-select">
+            <select class="filters-select" id="instrument-filter-select">
                 <option>-</option>
                 {% for instrument in instruments %}
                     <option>{{ instrument.name }}</option>
@@ -22,7 +22,7 @@
         <h2 class="musicians-filters-title">Стиль:</h2>
     
         <div class="box">
-            <select class="filters-select" id="style-select">
+            <select class="filters-select" id="genre-filter-select">
                 <option>-</option>
                 {% for genre in genres %}
                     <option>{{ genre.name }}</option>
@@ -42,6 +42,7 @@
 <div class="musician-list-container">
 
     <div class="musicians-list-wrapper">
+        
 
         {% for key, value in musicians_dict.items %}
 
