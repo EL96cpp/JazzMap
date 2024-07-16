@@ -312,3 +312,43 @@ ul {
     padding: 10px 10px;
     margin: 0px 0px;
 }
+
+.musicians-filters-title {
+    position: relative;
+    text-decoration: none;
+    color: aliceblue;
+    font-family: "Nunito", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.musicians-filters-list {
+    width: 750px;
+    display:flex;  
+    list-style:none;
+    justify-content: center;
+}
+
+.musicains-filters-element {
+    display: flex;
+    align-items: center;
+}
+
+.box {
+    width: 250px;
+    height: 40px;
+    margin-left: 10px;
+}
+
+.filters-select {
+    height: 100%;
+    border: none;
+    appearance: none;
+    color: aliceblue;
+    text-align: center;
+    font-family: "Nunito", sans-serif;
+    font-size: 20px;
+    background-color: rgb(0, 88, 88);
+    padding: 10px 10px;
+}

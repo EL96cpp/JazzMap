@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.core.paginator import Paginator
-from .models import Musician
+from .models import Musician, Instrument
+from genres.models import Genre
 
 
 def musicians(request):
@@ -9,12 +10,8 @@ def musicians(request):
     musicians_dict = dict()
 
     page_number = request.GET.get('page')
-    print("page number", page_number)
-
     current_page = paginator.get_page(page_number)
-
     page_obj = paginator.get_page(page_number)
-
 
     for musician in current_page:
         if musician.first_name[0] in musicians_dict:
@@ -24,7 +21,11 @@ def musicians(request):
 
     musicians_dict = dict(sorted(musicians_dict.items()))
 
-    return render(request, 'musicians/musicians_list.html', {"musicians_dict": musicians_dict, "page_obj": page_obj})
+    genres = Genre.objects.all()
+    instruments = Instrument.objects.all()
+
+    return render(request, 'musicians/musicians_list.html', 
+                  {"musicians_dict": musicians_dict, "page_obj": page_obj, "genres": genres, "instruments": instruments})
 
 
 def show_musician(request, musician_slug):

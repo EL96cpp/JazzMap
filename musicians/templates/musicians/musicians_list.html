@@ -4,6 +4,35 @@
 
 {% block header %}
 
+<ul class="musicians-filters-list">
+    <li class="musicains-filters-element">
+        <h2 class="musicians-filters-title">Инструмент:</h2>
+
+        <div class="box">
+            <select class="filters-select" id="instrument-select">
+                <option>-</option>
+                {% for instrument in instruments %}
+                    <option>{{ instrument.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+    </li>
+    <li class="musicains-filters-element">
+        <h2 class="musicians-filters-title">Стиль:</h2>
+    
+        <div class="box">
+            <select class="filters-select" id="style-select">
+                <option>-</option>
+                {% for genre in genres %}
+                    <option>{{ genre.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+    </li>
+</ul>
+
 <a class="main-nav-ref" id="styles-ref" href="{% url 'home' %}">На главную</a>
 
 {% endblock header %}
@@ -13,8 +42,6 @@
 <div class="musician-list-container">
 
     <div class="musicians-list-wrapper">
-        
-        {{ musicians_dict.count }}
 
         {% for key, value in musicians_dict.items %}
 
