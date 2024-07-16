@@ -9,4 +9,12 @@
 
 {% block body %}
 
+<div class="musician-article-container">
+    <p class="musician-article-title">{{ musician }}</p>
+    <text class="musician-article-text">
+        <img src="{{ musician.image.url }}" alt="{{ musician }}" class="genre-article-image">    
+        {{ musician.biography }}
+    </text>
+</div>
+
 {% endblock body %}

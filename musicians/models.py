@@ -25,3 +25,6 @@ class Musician(models.Model):
     class Meta:
         verbose_name = "Музыкант"
         verbose_name_plural = "Музыканты"
+
+    def __str__(self):
+        return self.first_name + " " + self.last_name

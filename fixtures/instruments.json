@@ -6,5 +6,6 @@
     {"model": "musicians.instrument", "pk": 4, "fields": {"name": "Vibraphone"}},
     {"model": "musicians.instrument", "pk": 5, "fields": {"name": "Drums"}},
     {"model": "musicians.instrument", "pk": 6, "fields": {"name": "Bass"}},
-    {"model": "musicians.instrument", "pk": 7, "fields": {"name": "Vocal"}}
+    {"model": "musicians.instrument", "pk": 7, "fields": {"name": "Vocal"}},
+    {"model": "musicians.instrument", "pk": 7, "fields": {"name": "Violin"}}
 ]

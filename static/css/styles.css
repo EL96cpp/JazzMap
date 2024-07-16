@@ -195,7 +195,7 @@ ul {
     color: transparent;
 }
 
-.genre-article-container {
+.genre-article-container, .musician-article-container {
     width: 1600px;
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
@@ -214,7 +214,7 @@ ul {
     margin-right: 20px;
 }
 
-.genre-article-title {
+.genre-article-title, .musician-article-title {
     color:black;
     font-family: "Nunito", sans-serif;
     font-size: 42px;
@@ -224,11 +224,47 @@ ul {
     margin-bottom: 10px;
 }
 
-.genre-article-text {
+.genre-article-text, .musician-article-text {
     color: black;
     font-family: "Nunito", sans-serif;
     font-size: 24px;
     text-align: justify;
     max-width: 1500px;
     max-height: 700px;
+}
+
+.musicians-list-container {
+    width: 1600px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 30px 30px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    display: block;
+    justify-content: center;  
+}
+
+.musician-letter-wrapper {
+    width: 100%;
+    height: 100%;
+    padding: 20px 20px;
+    display:flow-root;
+}
+
+.musicain-letter-title {
+    color: black;
+    font-family: "Nunito", sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.musician-name-ref {
+    color: black;
+    font-family: "Nunito", sans-serif;
+    font-size: 24px;
+}
+
+.musicians-letter-list {
+    display:contents;
 }

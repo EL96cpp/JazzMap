@@ -9,4 +9,31 @@
 
 {% block body %}
 
+<div class="musicians-list-container">
+    
+    {{ musicians_dict.count }}
+
+    {% for key, value in musicians_dict.items %}
+
+        <div class="musician-letter-wrapper">
+
+            <h2 class="musicain-letter-title">{{ key }}</h2>
+
+            <ul class="musicians-letter-list">
+
+                {% for musician in value %}
+                <li class="musician-li">
+                    <a class="musician-name-ref" href="{% url 'musicians:show_musician' musician.slug %}">{{ musician.first_name }} {{ musician.last_name }}</a>
+                </li>
+                {% endfor %}
+
+            </ul>
+
+        </div>
+
+    {% endfor %}
+
+</div>
+
+
 {% endblock body %}
