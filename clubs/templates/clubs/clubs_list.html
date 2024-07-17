@@ -9,4 +9,40 @@
 
 {% block body %}
 
+<div class="clubs-page-container">
+
+    <form class="clubs-filters-form" action="{% url 'clubs:clubs_list' %}" method="get">
+
+        <h2 class="clubs-filters-main-title">Фильтры</h2>
+
+        <h2 class="clubs-filters-title">Страна:</h2>
+        <div class="box">
+            <select class="filters-select" id="country-filter-select" name="country-filter">
+                <option></option>
+                {% for country in countries %}
+                    <option>{{ country }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <h2 class="clubs-filters-title">Город:</h2>
+        <div class="box">
+            <select class="filters-select" id="city-filter-select" name="city-filter">
+                <option></option>
+                {% for city in cities %}
+                    <option>{{ city.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <button class="filters-submit-button" type="submit">Применить</button>
+    </form>
+    <div class="clubs-list-wrapper">
+
+
+
+    </div>
+
+</div>
+
 {% endblock body %}
