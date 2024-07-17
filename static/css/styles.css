@@ -25,6 +25,7 @@ html {
 .quote-container {
     width: 1400px;
     display:block;
+    margin: 0 auto;
 }
 
 .quote-next-wrapper, .quote-previous-wrapper {
@@ -233,29 +234,8 @@ ul {
     max-height: 700px;
 }
 
-.musician-list-container {
-    margin: 0 auto;
-    width: 1200px;
-    align-items: center;
-    justify-content: center;
-}
-
-.musicians-list-wrapper {
-    width: 1200px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 10px;
-    padding: 30px 30px;
-    margin: 0 auto;
-    margin-bottom: 10px;
-    /* display: block; */
-    justify-content: center;  
-}
-
 .musician-letter-wrapper {
-    width: 100%;
-    height: 100%;
-    padding: 20px 20px;
-    display:flow-root;
+    padding: 5px 20px;
 }
 
 .musicain-letter-title {
@@ -277,7 +257,7 @@ ul {
 }
 
 .pagination {
-    margin-top: 40px;
+    margin: 40px auto;
     display: flex;
     justify-content: center;
 }
@@ -313,26 +293,37 @@ ul {
     margin: 0px 0px;
 }
 
+.musicians-filters-main-title {
+    text-decoration: underline;
+    text-transform: uppercase;
+    color: black;
+    font-family: "Nunito", sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-top: 10px;
+}
+
 .musicians-filters-title {
     position: relative;
     text-decoration: none;
-    color: aliceblue;
+    color: black;
     font-family: "Nunito", sans-serif;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 400;
     letter-spacing: 2px;
+    margin: 10px auto;
 }
 
-.musicians-filters-list {
-    width: 750px;
-    display:flex;  
-    list-style:none;
-    justify-content: center;
-}
-
-.musicains-filters-element {
-    display: flex;
-    align-items: center;
+.musicians-filters-form {
+    background-color: rgba(255, 255, 255, 0.8);
+    max-width: 350px;
+    height: 300px;
+    border-radius: 10px;
+    text-align: center;
+    display: block;
+    flex-direction: column;
+    gap: 15px;
 }
 
 .box {
@@ -350,5 +341,50 @@ ul {
     font-family: "Nunito", sans-serif;
     font-size: 20px;
     background-color: rgb(0, 88, 88);
+    padding: 10px 10px;
+}
+
+.filters-submit-button {
+    margin-top: 10px;
+    width: 200px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: rgb(0, 88, 88);
+    color: aliceblue;
+    text-align: center;
+    font-family: "Nunito", sans-serif;
+    font-size: 20px;
+}
+
+.filters-submit-button:hover {
+    background-color: aqua;
+    color: black;
+}
+
+.musicians-page-container {
+    margin: 0 auto;
+    max-width: 90%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.musician-list-wrapper {
+    width: 1000px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+}
+
+.musicians-list {
+    width: 800px;
+    height: 450px;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    max-height: 450px;
     padding: 10px 10px;
 }

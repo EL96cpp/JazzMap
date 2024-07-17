@@ -6,7 +6,19 @@ from genres.models import Genre
 
 def musicians(request):
     musicians = Musician.objects.all()
-    paginator = Paginator(musicians, 6)
+
+    instrument_filter = request.GET.get('instrument-filter', None)
+    genre_filter = request.GET.get('genre-filter', None)
+
+    print(musicians[1].genre, musicians[1].first_name, musicians[2].genre, musicians[2].first_name)
+    
+    if instrument_filter:
+        musicians = musicians.filter(instrument__name=instrument_filter)
+
+    if genre_filter:
+        musicians = musicians.filter(genre__name=genre_filter)
+
+    paginator = Paginator(musicians, 8)
     musicians_dict = dict()
 
     page_number = request.GET.get('page')

@@ -4,85 +4,84 @@
 
 {% block header %}
 
-<ul class="musicians-filters-list">
-    <li class="musicains-filters-element">
-        <h2 class="musicians-filters-title">Инструмент:</h2>
-
-        <div class="box">
-            <select class="filters-select" id="instrument-filter-select">
-                <option>-</option>
-                {% for instrument in instruments %}
-                    <option>{{ instrument.name }}</option>
-                {% endfor %}
-            </select>
-        </div>
-
-    </li>
-    <li class="musicains-filters-element">
-        <h2 class="musicians-filters-title">Стиль:</h2>
-    
-        <div class="box">
-            <select class="filters-select" id="genre-filter-select">
-                <option>-</option>
-                {% for genre in genres %}
-                    <option>{{ genre.name }}</option>
-                {% endfor %}
-            </select>
-        </div>
-
-    </li>
-</ul>
-
 <a class="main-nav-ref" id="styles-ref" href="{% url 'home' %}">На главную</a>
 
 {% endblock header %}
 
 {% block body %}
 
-<div class="musician-list-container">
+<div class="musicians-page-container">
 
-    <div class="musicians-list-wrapper">
-        
+    <form class="musicians-filters-form" action="{% url 'musicians:musicians_list' %}" method="get">
 
-        {% for key, value in musicians_dict.items %}
+        <h2 class="musicians-filters-main-title">Фильтры</h2>
 
-            <div class="musician-letter-wrapper">
+        <h2 class="musicians-filters-title">Инструмент:</h2>
+        <div class="box">
+            <select class="filters-select" id="instrument-filter-select" name="instrument-filter">
+                <option></option>
+                {% for instrument in instruments %}
+                    <option>{{ instrument.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
 
-                <h2 class="musicain-letter-title">{{ key }}</h2>
+        <h2 class="musicians-filters-title">Стиль:</h2>
+        <div class="box">
+            <select class="filters-select" id="genre-filter-select" name="genre-filter">
+                <option></option>
+                {% for genre in genres %}
+                    <option>{{ genre.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
 
-                <ul class="musicians-letter-list">
+        <button class="filters-submit-button" type="submit">Применить</button>
+    </form>
 
+    <div class="musician-list-wrapper">
+
+        <div class="musicians-list">
+            
+            {% for key, value in musicians_dict.items %}
+
+                <div class="musician-letter-wrapper">
+
+                    <h2 class="musicain-letter-title">{{ key }}</h2>
+
+                    <ul class="musicians-list-ul">
                     {% for musician in value %}
-                    <li class="musician-li">
-                        <a class="musician-name-ref" href="{% url 'musicians:show_musician' musician.slug %}">{{ musician.first_name }} {{ musician.last_name }}</a>
-                    </li>
+                        <li>
+                            <a class="musician-name-ref" href="{% url 'musicians:show_musician' musician.slug %}">{{ musician.first_name }} {{ musician.last_name }}</a>
+                        </li>
                     {% endfor %}
+                    </ul>
 
-                </ul>
+                </div>
 
-            </div>
+            {% endfor %}
 
-        {% endfor %}
+        </div>
 
-    </div>
-
-    <div class="pagination">
-        <span class="step-links">
-            {% if page_obj.has_previous %}
-                <a class="first_page" href="{% my_url 1 'page' request.GET.urlencode %}">&laquo; Первая</a>
-                <a class="previous_page" href="{% my_url page_obj.paginator.previous_page_number 'page' request.GET.urlencode %}">
-                {{ page_obj.previous_page_number }}</a>
-            {% endif %}
-
-            <span class="current">
-                {{ page_obj.number }}
+        <div class="pagination">
+            <span class="step-links">
+                {% if page_obj.has_previous %}
+                    <a class="first_page" href="{% my_url 1 'page' request.GET.urlencode %}">&laquo; Первая</a>
+                    <a class="previous_page" href="{% my_url page_obj.paginator.previous_page_number 'page' request.GET.urlencode %}">
+                    {{ page_obj.previous_page_number }}</a>
+                {% endif %}
+    
+                <span class="current">
+                    {{ page_obj.number }}
+                </span>
+    
+                {% if page_obj.has_next %}
+                    <a class="next_page" href="{% my_url page_obj.next_page_number 'page' request.GET.urlencode %}">{{ page_obj.next_page_number }}</a>
+                    <a class="last_page" href="{% my_url page_obj.paginator.num_pages 'page' request.GET.urlencode %}">Последняя &raquo;</a>
+                {% endif %}
             </span>
+        </div>
 
-            {% if page_obj.has_next %}
-                <a class="next_page" href="{% my_url page_obj.next_page_number 'page' request.GET.urlencode %}">{{ page_obj.next_page_number }}</a>
-                <a class="last_page" href="{% my_url page_obj.paginator.num_pages 'page' request.GET.urlencode %}">Последняя &raquo;</a>
-            {% endif %}
-        </span>
     </div>
 
 </div>
