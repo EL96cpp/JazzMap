@@ -1,0 +1,28 @@
+[
+   
+    {"model": "clubs.club", "pk": 0, "fields": 
+    {"name": "Клуб Алексея Козлова", "country": "Россия", "city": "Москва", "address": "ул. Маросейка, 9/2"}},
+    {"model": "clubs.club", "pk": 1, "fields": 
+    {"name": "Клуб Игоря Бутмана на Таганке", "country": "Россия", "city": "Москва", "address": "улица Верхняя Радищевская, 21"}},
+    {"model": "clubs.club", "pk": 2, "fields": 
+    {"name": "Союз Композиторов", "country": "Россия", "city": "Москва", "address": "Брюсов пер. 8/10 стр.2"}},
+    {"model": "clubs.club", "pk": 3, "fields": 
+    {"name": "Эссе", "country": "Россия", "city": "Москва", "address": "ул. Пятницкая, дом 27, стр. 3а м."}},
+    {"model": "clubs.club", "pk": 4, "fields": 
+    {"name": "Дом", "country": "Россия", "city": "Москва", "address": "Б. Овчинниковский переулок, дом 24, строение 4"}},
+    {"model": "clubs.club", "pk": 5, "fields": 
+    {"name": "JFC Jazz Club", "country": "Россия", "city": "Санкт-Петербург", "address": "ул. Шпалерная, д. 33"}},
+    {"model": "clubs.club", "pk": 6, "fields": 
+    {"name": "Village Vanguard", "country": "US", "city": "New-York", "address": "178 7th Ave S"}},
+    {"model": "clubs.club", "pk": 7, "fields": 
+    {"name": "Birdland Jazz Club", "country": "USA", "city": "New-York", "address": "315 W 44th St #5402"}},
+    {"model": "clubs.club", "pk": 8, "fields": 
+    {"name": "Blue Note Jazz Club", "country": "USA", "city": "New-York", "address": "131 W 3rd St"}},
+    {"model": "clubs.club", "pk": 9, "fields": 
+    {"name": "Smoke Jazz Club", "country": "USA", "city": "New-York", "address": "2751 Broadway"}},
+    {"model": "clubs.club", "pk": 10, "fields": 
+    {"name": "The Blue Lamp", "country": "UK", "city": "Aberdeen", "address": "121 Gallowgate, Aberdeen, AB25 1BU"}},
+    {"model": "clubs.club", "pk": 11, "fields": 
+    {"name": "Oliver’s Jazz Bar", "country": "UK", "city": "London", "address": "9 Nevada St, London, SE10 9JL"}}
+
+]
