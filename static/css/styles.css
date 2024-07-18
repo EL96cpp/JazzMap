@@ -293,7 +293,7 @@ ul {
     margin: 0px 0px;
 }
 
-.musicians-filters-main-title {
+.musicians-filters-main-title, .clubs-filters-main-title {
     text-decoration: underline;
     text-transform: uppercase;
     color: black;
@@ -304,7 +304,7 @@ ul {
     margin-top: 10px;
 }
 
-.musicians-filters-title {
+.musicians-filters-title, .clubs-filters-title {
     position: relative;
     text-decoration: none;
     color: black;
@@ -315,7 +315,7 @@ ul {
     margin: 10px auto;
 }
 
-.musicians-filters-form {
+.musicians-filters-form, .clubs-filters-form {
     background-color: rgba(255, 255, 255, 0.8);
     max-width: 350px;
     height: 300px;
@@ -327,12 +327,13 @@ ul {
 }
 
 .box {
-    width: 250px;
+    width: 230px;
     height: 40px;
-    margin-left: 10px;
+    margin: 10px 20px;
 }
 
 .filters-select {
+    width: 230px;
     height: 100%;
     border: none;
     appearance: none;
@@ -361,11 +362,10 @@ ul {
     color: black;
 }
 
-.musicians-page-container {
+.musicians-page-container, .clubs-page-container {
     margin: 0 auto;
     max-width: 90%;
     display: flex;
-    justify-content: space-around;
 }
 
 .musician-list-wrapper {
@@ -378,6 +378,7 @@ ul {
 .musicians-list {
     width: 800px;
     height: 450px;
+    margin: 0 auto;
     justify-content: space-between;
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
@@ -387,4 +388,30 @@ ul {
     justify-content: flex-start;
     max-height: 450px;
     padding: 10px 10px;
+}
+
+.club-element {
+    margin: 0 auto;
+    margin-bottom: 20px;
+    width: 800px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px;
+}
+
+.club-name {
+    color: black;
+    text-align: left;
+    font-family: "Nunito", sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.clubs-list-outer-wrapper {
+    max-width: 900px;
+    max-height: 400px;
+    margin: 0 auto;
 }

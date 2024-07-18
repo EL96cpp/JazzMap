@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load clubs_extras %}
 
 {% block header %}
 
@@ -37,10 +38,42 @@
 
         <button class="filters-submit-button" type="submit">Применить</button>
     </form>
-    <div class="clubs-list-wrapper">
 
+    <div class="clubs-list-outer-wrapper">
+        <div class="clubs-list-wrapper">
 
+            {% for club in clubs %}
 
+            <div class="club-element">
+
+                <div class="club-name">{{ club.name }}</div>
+                <div class="club-global-address">{{ club.country }}, {{ club.city }}</div>
+                <div class="club-local-address">{{ club.address }}</div>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+        <div class="pagination">
+            <span class="step-links">
+                {% if page_obj.has_previous %}
+                    <a class="first_page" href="{% my_url 1 'page' request.GET.urlencode %}">&laquo; Первая</a>
+                    <a class="previous_page" href="{% my_url page_obj.paginator.previous_page_number 'page' request.GET.urlencode %}">
+                    {{ page_obj.previous_page_number }}</a>
+                {% endif %}
+
+                <span class="current">
+                    {{ page_obj.number }}
+                </span>
+
+                {% if page_obj.has_next %}
+                    <a class="next_page" href="{% my_url page_obj.next_page_number 'page' request.GET.urlencode %}">{{ page_obj.next_page_number }}</a>
+                    <a class="last_page" href="{% my_url page_obj.paginator.num_pages 'page' request.GET.urlencode %}">Последняя &raquo;</a>
+                {% endif %}
+            </span>
+        </div>
     </div>
 
 </div>
