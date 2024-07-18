@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.views.generic.detail import DetailView
 from django.core.paginator import Paginator
 from .models import Musician, Instrument
 from genres.models import Genre
@@ -48,7 +49,15 @@ def musicians(request):
     return render(request, 'musicians/musicians_list.html', context)
 
 
-def show_musician(request, musician_slug):
-    musician = Musician.objects.filter(slug=musician_slug)
-    print(musician[0].image.url)
-    return render(request, 'musicians/musician.html', {"musician": musician[0]})
+class MusicianView(DetailView):
+    slug_url_kwarg = "musician_slug"
+    template_name = "musicians/musician.html"
+
+    def get_object(self, queryset=None):
+        musician = Musician.objects.get(slug=self.kwargs.get(self.slug_url_kwarg))
+        return musician
+
+# def show_musician(request, musician_slug):
+#     musician = Musician.objects.filter(slug=musician_slug)
+#     print(musician[0].image.url)
+#     return render(request, 'musicians/musician.html', {"musician": musician[0]})

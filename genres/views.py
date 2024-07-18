@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.views.generic.detail import DetailView
 from .models import Genre
 
 
@@ -7,7 +8,10 @@ def genres(request):
     return render(request, 'genres/genres_list.html', {"genres": genres})
 
 
-def show_genre(request, genre_slug):
-    genre = Genre.objects.filter(slug=genre_slug)
-    print(genre[0].name, genre[0].image.url)
-    return render(request, 'genres/genre.html', {"genre": genre[0]})
+class GenreView(DetailView):
+    slug_url_kwarg = "genre_slug"
+    template_name = "genres/genre.html"
+
+    def get_object(self, queryset=None):
+        genre = Genre.objects.get(slug=self.kwargs.get(self.slug_url_kwarg))
+        return genre

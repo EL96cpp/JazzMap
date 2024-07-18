@@ -6,5 +6,5 @@ app_name = 'musicians'
 
 urlpatterns = [
     path('', musicians, name='musicians_list'),
-    path('<slug:musician_slug>/', show_musician, name='show_musician'),
+    path('<slug:musician_slug>/', MusicianView.as_view(), name='show_musician'),
 ]

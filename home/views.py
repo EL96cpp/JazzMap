@@ -1,4 +1,6 @@
+from typing import Any
 from django.shortcuts import render
+from django.views.generic.base import TemplateView
 from django.http import JsonResponse
 from django.template.loader import render_to_string
 from django.views.generic import TemplateView
@@ -8,14 +10,28 @@ from django.core.cache import cache
 from .models import Quote
 
 
-@cache_page(60*120)
-def index(request):
-    quotes = Quote.objects.all()
-    quotes_list = list(quotes)
-    shuffle(quotes_list)
-    cache.set("quotes_list", quotes_list, 60*120)
-    current_quote = quotes_list[len(quotes_list)//2]
-    return render(request, 'home/index.html', {"current_quote": current_quote})
+class HomePageView(TemplateView):
+    template_name = "home/index.html"
+
+    def get_context_data(self, **kwargs: Any):
+        quotes = Quote.objects.all()
+        quotes_list = list(quotes)
+        shuffle(quotes_list)
+        cache.set("quotes_list", quotes_list, 60*120)
+        current_quote = quotes_list[len(quotes_list)//2]
+        context = super().get_context_data(**kwargs)
+        context["current_quote"] = current_quote
+        return context
+
+
+# @cache_page(60*120)
+# def index(request):
+#     quotes = Quote.objects.all()
+#     quotes_list = list(quotes)
+#     shuffle(quotes_list)
+#     cache.set("quotes_list", quotes_list, 60*120)
+#     current_quote = quotes_list[len(quotes_list)//2]
+#     return render(request, 'home/index.html', {"current_quote": current_quote})
 
 
 def get_next_quote(request):
