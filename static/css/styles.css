@@ -318,12 +318,12 @@ ul {
 .musicians-filters-form, .clubs-filters-form {
     background-color: rgba(255, 255, 255, 0.8);
     max-width: 350px;
-    height: 300px;
+    max-height: 340px;
     border-radius: 10px;
     text-align: center;
     display: block;
     flex-direction: column;
-    gap: 15px;
+    padding: 10px 10px;
 }
 
 .box {
@@ -346,7 +346,7 @@ ul {
 }
 
 .filters-submit-button {
-    margin-top: 10px;
+    margin-top: 20px;
     width: 200px;
     height: 40px;
     border-radius: 20px;
@@ -368,7 +368,7 @@ ul {
     display: flex;
 }
 
-.musician-list-wrapper {
+.musician-list-wrapper, .club-list-outer-wrapper {
     width: 1000px;
     height: 600px;
     display: flex;
@@ -393,12 +393,12 @@ ul {
 .club-element {
     margin: 0 auto;
     margin-bottom: 20px;
-    width: 800px;
+    width: 500px;
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    padding: 10px 10px;
+    padding: 10px 20px;
 }
 
 .club-name {
@@ -410,8 +410,19 @@ ul {
     text-decoration: underline;
 }
 
-.clubs-list-outer-wrapper {
-    max-width: 900px;
-    max-height: 400px;
+.clubs-list {
+    width: 1200px;
     margin: 0 auto;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-height: 750px;
+    padding: 0px 10px;
+    column-gap: 10px;
+    row-gap: 10px;
+}
+
+.club-image {
+    width: 200px;
+    height: 200px;
 }

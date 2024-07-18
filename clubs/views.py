@@ -27,6 +27,8 @@ def clubs(request):
         "countries": countries,
         "cities": cities,
         "page_obj": page_obj,
+        "country_filter": country_filter,
+        "city_filter": city_filter
     }
 
     return render(request, 'clubs/clubs_list.html', context)

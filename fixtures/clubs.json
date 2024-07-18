@@ -1,28 +1,40 @@
 [
    
     {"model": "clubs.club", "pk": 0, "fields": 
-    {"name": "Клуб Алексея Козлова", "country": "Россия", "city": "Москва", "address": "ул. Маросейка, 9/2"}},
+    {"name": "Клуб Алексея Козлова", "country": "Россия", "city": "Москва", "address": "ул. Маросейка, 9/2",
+    "image": "/clubs/images/kozlov-club.jpg"}},
     {"model": "clubs.club", "pk": 1, "fields": 
-    {"name": "Клуб Игоря Бутмана на Таганке", "country": "Россия", "city": "Москва", "address": "улица Верхняя Радищевская, 21"}},
+    {"name": "Клуб Игоря Бутмана на Таганке", "country": "Россия", "city": "Москва", "address": "улица Верхняя Радищевская, 21",
+    "image": "/clubs/images/butman-club.jpg"}},
     {"model": "clubs.club", "pk": 2, "fields": 
-    {"name": "Союз Композиторов", "country": "Россия", "city": "Москва", "address": "Брюсов пер. 8/10 стр.2"}},
+    {"name": "Союз Композиторов", "country": "Россия", "city": "Москва", "address": "Брюсов пер. 8/10 стр.2",
+    "image": "/clubs/images/soyuz-kompozitorov.jpg"}},
     {"model": "clubs.club", "pk": 3, "fields": 
-    {"name": "Эссе", "country": "Россия", "city": "Москва", "address": "ул. Пятницкая, дом 27, стр. 3а м."}},
+    {"name": "Эссе", "country": "Россия", "city": "Москва", "address": "ул. Пятницкая, дом 27, стр. 3а м.",
+    "image": "/clubs/images/esse.jpg"}},
     {"model": "clubs.club", "pk": 4, "fields": 
-    {"name": "Дом", "country": "Россия", "city": "Москва", "address": "Б. Овчинниковский переулок, дом 24, строение 4"}},
+    {"name": "The Hat bar", "country": "Россия", "city": "Санкт-Петербург", "address": "ул. Белинского, 9",
+    "image": "/clubs/images/hat-bar.jpg"}},
     {"model": "clubs.club", "pk": 5, "fields": 
-    {"name": "JFC Jazz Club", "country": "Россия", "city": "Санкт-Петербург", "address": "ул. Шпалерная, д. 33"}},
+    {"name": "JFC Jazz Club", "country": "Россия", "city": "Санкт-Петербург", "address": "ул. Шпалерная, д. 33",
+    "image": "/clubs/images/jfc-jazz-club.jpg"}},
     {"model": "clubs.club", "pk": 6, "fields": 
-    {"name": "Village Vanguard", "country": "US", "city": "New-York", "address": "178 7th Ave S"}},
+    {"name": "Village Vanguard", "country": "US", "city": "New-York", "address": "178 7th Ave S",
+    "image": "/clubs/images/village-vanguard.jpg"}},
     {"model": "clubs.club", "pk": 7, "fields": 
-    {"name": "Birdland Jazz Club", "country": "USA", "city": "New-York", "address": "315 W 44th St #5402"}},
+    {"name": "Birdland Jazz Club", "country": "USA", "city": "New-York", "address": "315 W 44th St #5402",
+    "image": "/clubs/images/birdland.jpg"}},
     {"model": "clubs.club", "pk": 8, "fields": 
-    {"name": "Blue Note Jazz Club", "country": "USA", "city": "New-York", "address": "131 W 3rd St"}},
+    {"name": "Blue Note Jazz Club", "country": "USA", "city": "New-York", "address": "131 W 3rd St",
+    "image": "/clubs/images/blue-note.jpg"}},
     {"model": "clubs.club", "pk": 9, "fields": 
-    {"name": "Smoke Jazz Club", "country": "USA", "city": "New-York", "address": "2751 Broadway"}},
+    {"name": "Smoke Jazz Club", "country": "USA", "city": "New-York", "address": "2751 Broadway",
+    "image": "/clubs/images/smoke-club.jpg"}},
     {"model": "clubs.club", "pk": 10, "fields": 
-    {"name": "The Blue Lamp", "country": "UK", "city": "Aberdeen", "address": "121 Gallowgate, Aberdeen, AB25 1BU"}},
+    {"name": "The Blue Lamp", "country": "UK", "city": "Aberdeen", "address": "121 Gallowgate, Aberdeen, AB25 1BU",
+    "image": "/clubs/images/blue-lamp.jpg"}},
     {"model": "clubs.club", "pk": 11, "fields": 
-    {"name": "Oliver’s Jazz Bar", "country": "UK", "city": "London", "address": "9 Nevada St, London, SE10 9JL"}}
+    {"name": "Oliver’s Jazz Bar", "country": "UK", "city": "London", "address": "9 Nevada St, London, SE10 9JL",
+    "image": "/clubs/images/olivers-jazz-bar.jpg"}}
 
 ]

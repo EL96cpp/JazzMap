@@ -36,8 +36,16 @@ def musicians(request):
     genres = Genre.objects.all()
     instruments = Instrument.objects.all()
 
-    return render(request, 'musicians/musicians_list.html', 
-                  {"musicians_dict": musicians_dict, "page_obj": page_obj, "genres": genres, "instruments": instruments})
+    context = {
+        "instrument_filter": instrument_filter,
+        "genre_filter": genre_filter,
+        "musicians_dict": musicians_dict, 
+        "page_obj": page_obj, 
+        "genres": genres, 
+        "instruments": instruments
+    }
+
+    return render(request, 'musicians/musicians_list.html', context)
 
 
 def show_musician(request, musician_slug):

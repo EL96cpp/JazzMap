@@ -21,7 +21,7 @@
             <select class="filters-select" id="instrument-filter-select" name="instrument-filter">
                 <option></option>
                 {% for instrument in instruments %}
-                    <option>{{ instrument.name }}</option>
+                    <option {% if instrument.name == instrument_filter %}selected{% endif %}>{{ instrument.name }}</option>
                 {% endfor %}
             </select>
         </div>
@@ -31,7 +31,7 @@
             <select class="filters-select" id="genre-filter-select" name="genre-filter">
                 <option></option>
                 {% for genre in genres %}
-                    <option>{{ genre.name }}</option>
+                    <option {% if genre.name == genre_filter %}selected{% endif %}>{{ genre.name }}</option>
                 {% endfor %}
             </select>
         </div>

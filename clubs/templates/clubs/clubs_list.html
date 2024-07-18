@@ -21,7 +21,7 @@
             <select class="filters-select" id="country-filter-select" name="country-filter">
                 <option></option>
                 {% for country in countries %}
-                    <option>{{ country }}</option>
+                    <option {% if country == country_filter %}selected{% endif %}>{{ country }}</option>
                 {% endfor %}
             </select>
         </div>
@@ -31,7 +31,9 @@
             <select class="filters-select" id="city-filter-select" name="city-filter">
                 <option></option>
                 {% for city in cities %}
-                    <option>{{ city }}</option>
+                    <option {% if city == city_filter %}selected{% endif %}>
+                        {{ city }}
+                    </option>
                 {% endfor %}
             </select>
         </div>
@@ -40,13 +42,14 @@
     </form>
 
     <div class="clubs-list-outer-wrapper">
-        <div class="clubs-list-wrapper">
+        <div class="clubs-list">
 
             {% for club in clubs %}
 
             <div class="club-element">
 
                 <div class="club-name">{{ club.name }}</div>
+                <img src="{{ club.image.url }}" alt="{{ club.name }}" class="club-image">
                 <div class="club-global-address">{{ club.country }}, {{ club.city }}</div>
                 <div class="club-local-address">{{ club.address }}</div>
 
