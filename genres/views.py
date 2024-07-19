@@ -1,11 +1,20 @@
 from django.shortcuts import render
-from django.views.generic.detail import DetailView
+from django.views.generic import DetailView, ListView
 from .models import Genre
 
 
-def genres(request):
-    genres = Genre.objects.all()
-    return render(request, 'genres/genres_list.html', {"genres": genres})
+class GenresListView(ListView):
+    template_name = "genres/genres_list.html"
+    context_object_name = "genres"
+    model = Genre
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        return context
+
+# def genres(request):
+#     genres = Genre.objects.all()
+#     return render(request, 'genres/genres_list.html', {"genres": genres})
 
 
 class GenreView(DetailView):
