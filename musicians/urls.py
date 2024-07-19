@@ -5,6 +5,6 @@ from .views import *
 app_name = 'musicians'
 
 urlpatterns = [
-    path('', musicians, name='musicians_list'),
+    path('', MusicianListView.as_view(), name='musicians_list'),
     path('<slug:musician_slug>/', MusicianView.as_view(), name='show_musician'),
 ]

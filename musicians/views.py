@@ -1,52 +1,40 @@
+from typing import Any
 from django.shortcuts import render
-from django.views.generic.detail import DetailView
+from django.views.generic import DetailView, ListView
 from django.core.paginator import Paginator
 from .models import Musician, Instrument
 from genres.models import Genre
 
 
-def musicians(request):
-    musicians = Musician.objects.all()
+class MusicianListView(ListView):
+    template_name = "musicians/musicians_list.html"
+    context_object_name = "musicians"
+    paginate_by = 8
 
-    instrument_filter = request.GET.get('instrument-filter', None)
-    genre_filter = request.GET.get('genre-filter', None)
+    def get_queryset(self):
+        musicians = Musician.objects.all()
+        musicians = musicians.order_by('first_name')
 
-    print(musicians[1].genre, musicians[1].first_name, musicians[2].genre, musicians[2].first_name)
-    
-    if instrument_filter:
-        musicians = musicians.filter(instrument__name=instrument_filter)
+        instrument_filter = self.request.GET.get('instrument-filter', None)
+        genre_filter = self.request.GET.get('genre-filter', None)
 
-    if genre_filter:
-        musicians = musicians.filter(genre__name=genre_filter)
+        if instrument_filter:
+            musicians = musicians.filter(instrument__name=instrument_filter)
 
-    paginator = Paginator(musicians, 8)
-    musicians_dict = dict()
+        if genre_filter:
+            musicians = musicians.filter(genre__name=genre_filter)
 
-    page_number = request.GET.get('page')
-    current_page = paginator.get_page(page_number)
-    page_obj = paginator.get_page(page_number)
+        return musicians
 
-    for musician in current_page:
-        if musician.first_name[0] in musicians_dict:
-            musicians_dict[musician.first_name[0]].append(musician)
-        else:
-            musicians_dict[musician.first_name[0]] = [musician,]
 
-    musicians_dict = dict(sorted(musicians_dict.items()))
+    def get_context_data(self, **kwargs: Any):
+        context = super().get_context_data(**kwargs)
+        context["instruments"] = Instrument.objects.all()
+        context["genres"] = Genre.objects.all()
+        context["instrument_filter"] = self.request.GET.get('instrument-filter')
+        context["genre_filter"] = self.request.GET.get('genre-filter') 
+        return context
 
-    genres = Genre.objects.all()
-    instruments = Instrument.objects.all()
-
-    context = {
-        "instrument_filter": instrument_filter,
-        "genre_filter": genre_filter,
-        "musicians_dict": musicians_dict, 
-        "page_obj": page_obj, 
-        "genres": genres, 
-        "instruments": instruments
-    }
-
-    return render(request, 'musicians/musicians_list.html', context)
 
 
 class MusicianView(DetailView):
@@ -57,7 +45,3 @@ class MusicianView(DetailView):
         musician = Musician.objects.get(slug=self.kwargs.get(self.slug_url_kwarg))
         return musician
 
-# def show_musician(request, musician_slug):
-#     musician = Musician.objects.filter(slug=musician_slug)
-#     print(musician[0].image.url)
-#     return render(request, 'musicians/musician.html', {"musician": musician[0]})

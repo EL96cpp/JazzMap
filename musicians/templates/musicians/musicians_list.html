@@ -25,6 +25,7 @@
                 {% endfor %}
             </select>
         </div>
+        {{ instrumen }}
 
         <h2 class="musicians-filters-title">Стиль:</h2>
         <div class="box">
@@ -43,18 +44,20 @@
 
         <div class="musicians-list">
             
-            {% for key, value in musicians_dict.items %}
+            {% for musician in musicians %}
 
                 <div class="musician-letter-wrapper">
 
-                    <h2 class="musicain-letter-title">{{ key }}</h2>
+                    {% ifchanged musician.first_name.0 %}
+                    
+                    <h2 class="musicain-letter-title">{{ musician.first_name.0 }}</h2>
+                    
+                    {% endifchanged %}
 
                     <ul class="musicians-list-ul">
-                    {% for musician in value %}
                         <li>
                             <a class="musician-name-ref" href="{% url 'musicians:show_musician' musician.slug %}">{{ musician.first_name }} {{ musician.last_name }}</a>
                         </li>
-                    {% endfor %}
                     </ul>
 
                 </div>
